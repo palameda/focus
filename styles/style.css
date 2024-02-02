@@ -5,7 +5,7 @@
   gap: 40px;
   font-family: var(--main-font);
   font-size: 18px;
-  line-height: 23.4px; 
+  line-height: 23.4px;
   background-color: var(--bg-color);
   background-image: var(--bg-image-alt, var(--bg-image));
   background-position: top center;
@@ -40,9 +40,9 @@
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 38px;
-  content: 'REC';
+  content: "REC";
   color: var(--decor-color);
-  line-height: 25px; 
+  line-height: 25px;
 }
 
 @media (width >= 768px) {
@@ -56,7 +56,7 @@
   position: absolute;
   inset-block-start: 18px;
   inset-inline-end: 19px;
-  content: '';
+  content: "";
   background-color: var(--decor-color);
   border-radius: 50%;
   width: 9px;
@@ -105,7 +105,7 @@
   padding: 4px 13px;
   text-transform: lowercase;
   font-weight: 400;
-  line-height: 18px; 
+  line-height: 18px;
   color: var(--link-color);
 }
 
@@ -132,7 +132,7 @@
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  line-height: 82.5%; 
+  line-height: 82.5%;
   color: var(--header-text-color);
   text-shadow: 4px 4px 0px var(--accent-color);
   grid-column: 1 / 4;
@@ -169,7 +169,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 23.4px; 
+  line-height: 23.4px;
 }
 
 /* Настройка стилей для main */
@@ -362,16 +362,17 @@ footer {
   }
 
   .decorated-zone::before {
-  content: '';
-  position: absolute;
-  inset-block-start: 10px;
-  inset-inline-end: 10px;
-  border-block-start: 1px solid var(--link-color);
-  border-inline-end: 1px solid var(--link-color);
-  justify-self: end;
-  align-self: self-start;
-  width: 25px;
-  height: 25px;
+    content: "";
+    position: absolute;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+    border-block-start: 1px solid var(--link-color);
+    border-inline-end: 1px solid var(--link-color);
+    justify-self: end;
+    align-self: self-start;
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media (width >= 768px) {
@@ -382,7 +383,7 @@ footer {
 }
 
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   inset-block-end: 10px;
   inset-inline-start: 10px;

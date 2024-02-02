@@ -9,7 +9,7 @@
   --header-color: var(--accent-color);
   --bg-image: url(../images/cover-image-dark.png);
   --bg-image-alt: image-set(
-    url(../images/cover-image-dark.avif) type('image/avif'),
-    url(../images/cover-image-dark.webp) type('image/webp')
+    url(../images/cover-image-dark.avif) type("image/avif"),
+    url(../images/cover-image-dark.webp) type("image/webp")
   );
 }
