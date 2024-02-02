@@ -1,5 +1,136 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
+  gap: 40px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px; 
+  background-color: var(--bg-color);
+  background-image: var(--bg-image-alt, var(--bg-image));
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (width >= 768px) {
+  .page {
+    gap: 60px;
+  }
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 10px;
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
+}
+
+.header__theme-menu {
+  grid-column: 3 / 4;
+  align-self: center;
+  justify-self: end;
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    grid-column: 2 / 3;
+    align-self: start;
+    justify-self: center;
+  }
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 4px 13px;
+  text-transform: lowercase;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+  color: var(--link-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid;
+}
+
+.header__theme-menu-button:disabled {
+  pointer-events: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%; /* 129.525px */
+  color: var(--header-text-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  grid-column: 1 / 4;
+}
+
+@media (width >= 768px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: -20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__title {
+    text-shadow: 4px 4px 0px #ff0070;
+  }
+}
+
+.header_subtitle {
+  grid-column: 1 / 4;
+  justify-self: end;
+  align-self: center;
+}
+
+@media (width >= 768px) {
+  .header_subtitle {
+    width: 50%;
+  }
+}
+
+.title-decor {
+  color: var(--decor-text-color);
+  background-color: var(--accent-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
 }
