@@ -36,6 +36,41 @@
   }
 }
 
+.header__decoration::before {
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 38px;
+  content: 'REC';
+  color: var(--decor-color);
+  line-height: 25px; 
+}
+
+@media (width >= 768px) {
+  .header__decoration::before {
+    inset-block-start: 20px;
+    inset-inline-end: 48px;
+  }
+}
+
+.header__decoration::after {
+  position: absolute;
+  inset-block-start: 18px;
+  inset-inline-end: 19px;
+  content: '';
+  background-color: var(--decor-color);
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  box-shadow: 0px 0px 4px 2px var(--decor-color);
+}
+
+@media (width >= 768px) {
+  .header__decoration::after {
+    inset-block-start: 28px;
+    inset-inline-end: 29px;
+  }
+}
+
 .header__theme-menu {
   grid-column: 3 / 4;
   align-self: center;
@@ -70,7 +105,7 @@
   padding: 4px 13px;
   text-transform: lowercase;
   font-weight: 400;
-  line-height: 18px; /* 100% */
+  line-height: 18px; 
   color: var(--link-color);
 }
 
@@ -97,7 +132,7 @@
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  line-height: 82.5%; /* 129.525px */
+  line-height: 82.5%; 
   color: var(--header-text-color);
   text-shadow: 4px 4px 0px var(--accent-color);
   grid-column: 1 / 4;
@@ -134,7 +169,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 23.4px; /* 130% */
+  line-height: 23.4px; 
 }
 
 /* Настройка стилей для main */
@@ -325,3 +360,43 @@ footer {
   .footer__text {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
+  .decorated-zone::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  border-block-start: 1px solid var(--link-color);
+  border-inline-end: 1px solid var(--link-color);
+  justify-self: end;
+  align-self: self-start;
+  width: 25px;
+  height: 25px;
+}
+
+@media (width >= 768px) {
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  border-block-end: 1px solid var(--link-color);
+  border-inline-start: 1px solid var(--link-color);
+  justify-self: end;
+  align-self: self-start;
+  width: 25px;
+  height: 25px;
+}
+
+@media (width >= 768px) {
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+}
