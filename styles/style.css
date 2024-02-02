@@ -298,3 +298,30 @@
     gap: 20px;
   }
 }
+
+footer {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__text {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%; /* 99px */
+  color: var(--header-text-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+@media (width >= 1024px) {
+  .footer__text {
+    text-shadow: 2px 2px 0px #ff0070;
+  }
+}
+
+@media (width >= 768px) {
+  .footer__text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
