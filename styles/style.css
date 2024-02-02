@@ -23,6 +23,7 @@
 
 .header {
   position: relative;
+  min-height: 668px;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -40,9 +41,10 @@
   position: absolute;
   inset-block-start: 10px;
   inset-inline-end: 38px;
-  content: "REC";
+  content: "rec";
   color: var(--decor-color);
   line-height: 25px;
+  text-transform: uppercase;
 }
 
 @media (width >= 768px) {
@@ -111,6 +113,7 @@
 
 .header__theme-menu-button:hover {
   outline: 1px solid;
+  
 }
 
 .header__theme-menu-button:focus {
@@ -234,37 +237,37 @@
 }
 
 @media (width >= 768px) {
-  .first-column {
+  .start-column {
     grid-column-start: 1;
   }
 
-  .one-column {
+  .article-column {
     grid-column-end: span 3;
   }
 
-  .two-columns {
+  .wide-columns {
     grid-column-end: span 2;
   }
 
-  .main__content-article.two-columns {
+  .main__content-article.wide-columns {
     margin-inline-start: 6px;
   }
 
-  .three-columns {
+  .image-columns {
     grid-column-end: span 3;
   }
 
-  .two-rows {
+  .split-rows {
     grid-row-end: span 2;
   }
 }
 
 @media (width >= 1024px) {
-  .one-column {
+  .article-column {
     grid-column-end: span 1;
   }
 
-  .main__content-article.two-columns {
+  .main__content-article.wide-columns {
     margin-inline-start: 0;
   }
 }
@@ -316,22 +319,23 @@
   }
 }
 
-.main__content-article.gap20 {
+.main__content-article.article-gap {
   gap: 20px;
 }
 
-.gap1020 {
+.content-gap {
   gap: 10px;
 }
 
 @media (width >= 768px) {
-  .gap1020 {
+  .content-gap {
     gap: 20px;
   }
 }
 
 footer {
   position: relative;
+  min-height: 668px;
   height: 100vh;
   display: grid;
   justify-content: center;
