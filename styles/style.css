@@ -1,4 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Основные свойства страницы */
 
 .page {
   display: grid;
@@ -18,6 +18,8 @@
     gap: 60px;
   }
 }
+
+/* Настройка стилей для header*/
 
 .header {
   position: relative;
@@ -133,4 +135,65 @@
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
+}
+
+/* Настройка стилей для main */
+
+.main {
+  display: grid;
+  gap: 50px;
+  margin: 0 10px;
+}
+
+@media (width >= 768px) {
+  .main {
+    gap: 80px;
+    margin: 0 20px;
+  }
+}
+
+.main__content {
+  display: grid;
+  gap: 20px;
+}
+
+@media (width >= 768px) {
+  .main__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main__content-article {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  gap: 10px;
+}
+
+.main__header {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  color: var(--header-color);
+}
+
+.main__paragraph {
+  color: var(--text-color);
+}
+
+.main__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.main__link:hover {
+  border-block-end: 1px solid;
+}
+
+.main__link:focus {
+  outline: none;
+}
+
+.main__link:focus-visible {
+  outline: 1px solid;
+  outline-offset: -1px;
 }
