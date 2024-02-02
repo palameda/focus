@@ -272,10 +272,6 @@
   font-weight: 400;
 }
 
-.main__paragraph {
-  color: var(--text-color);
-}
-
 .main__list {
   display: grid;
   gap: 10px;
